@@ -1,5 +1,5 @@
 import { css, type Theme } from '@emotion/react';
-import { HEADER_HEIGHT } from '@/styles/constants';
+import { media } from '@/styles/media';
 
 export const appShellStyle = (theme: Theme) => css`
   width: 100%;
@@ -9,33 +9,37 @@ export const appShellStyle = (theme: Theme) => css`
   background-color: ${theme.colors.bg.primary};
 `;
 
-export const pageContentStyle = (theme: Theme) => css`
+// About Me 페이지 중앙 컬럼 (디자인: max-width 1000px, 좌우 24px)
+export const homeContainerStyle = css`
   flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
-  padding-top: calc(${HEADER_HEIGHT} + ${theme.spacing.lg});
-  width: 100%;
-  max-width: ${theme.breakpoints.desktop};
-  margin: 0 auto;
-  padding-left: ${theme.spacing.md};
-  padding-right: ${theme.spacing.md};
 
-  @media (min-width: ${theme.breakpoints.tablet}) {
-    padding-left: ${theme.spacing.xl};
-    padding-right: ${theme.spacing.xl};
+  ${media.tabletUp} {
+    padding: 0 24px;
   }
 `;
 
-export const sectionStyle = (theme: Theme) => css`
-  display: flex;
-  flex-direction: column;
-  gap: ${theme.spacing.lg};
-  padding: ${theme.spacing['2xl']} 0;
-  scroll-margin-top: calc(${HEADER_HEIGHT} + ${theme.spacing.md});
+// 섹션 상단 여백 (모바일 52px → 데스크톱 76px)
+export const sectionStyle = css`
+  padding-top: 52px;
+  scroll-margin-top: 72px;
+
+  ${media.tabletUp} {
+    padding-top: 76px;
+  }
 `;
 
-export const sectionTitleStyle = (theme: Theme) => css`
-  font-size: ${theme.fontSize.xl};
-  font-weight: ${theme.fontWeight.bold};
-  color: ${theme.colors.fg.primary};
+// 섹션 머리말 (About / Career / Skills … — accent 대문자 라벨)
+export const sectionEyebrowStyle = (theme: Theme) => css`
+  margin: 0;
+  font-size: ${theme.fontSize.sm};
+  font-weight: ${theme.fontWeight.semibold};
+  color: ${theme.colors.accent.primary};
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 `;
