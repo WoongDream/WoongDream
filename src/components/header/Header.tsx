@@ -1,20 +1,15 @@
 import { memo } from 'react';
+import { navItems } from '@/content/profile';
 import { headerStyle, logoStyle, navStyle, navLinkStyle } from './Header.style';
-
-const NAV_ITEMS = [
-  { label: 'About', href: '#about' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
-] as const;
 
 const Header = memo(() => {
   return (
     <header css={headerStyle}>
       <a css={logoStyle} href="#top">
-        WoongDream
+        박기웅<span>.</span>
       </a>
       <nav css={navStyle}>
-        {NAV_ITEMS.map((item) => (
+        {navItems.map((item) => (
           <a key={item.href} css={navLinkStyle} href={item.href}>
             {item.label}
           </a>
