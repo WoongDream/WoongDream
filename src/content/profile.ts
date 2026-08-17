@@ -209,6 +209,7 @@ export const skills: SkillGroup[] = [
 ];
 
 export const certs: Cert[] = [
+  { name: 'SAIL (Samsung AI Language) Test – IH', date: '26.06' },
   { name: 'AI Certificate Advanced', date: '26.04' },
   { name: 'AI Certificate Associate', date: '25.10' },
   { name: 'Samsung Cloud Platform Certified Cloud Business Leader', date: '23.04' },
@@ -233,6 +234,11 @@ export const awards: Award[] = [
     label: '스코어보드',
   },
   { text: '2020 UCPC 본선 49위' },
+  {
+    text: 'C++ 알고리즘 문제풀이 블로그 운영 (대학생 시절)',
+    href: 'https://mapocodingpark.blogspot.com/',
+    label: '블로그',
+  },
 ];
 
 export const contact = {
