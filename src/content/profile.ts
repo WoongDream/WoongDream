@@ -39,6 +39,7 @@ export const navItems: NavItem[] = [
   { label: '개인 프로젝트', href: '#project' },
   { label: '역량', href: '#skills' },
   { label: '자격·수상', href: '#awards' },
+  { label: '노트', href: '/notes' },
 ];
 
 export const stats: Stat[] = [

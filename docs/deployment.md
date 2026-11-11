@@ -32,6 +32,7 @@ git push origin main   (또는 Actions 탭에서 수동 실행)
 GitHub Actions (ubuntu-latest, concurrency=deploy-frontend, 중복 배포 취소)
   ├─ actions/setup-node@v4 (node-version-file: .nvmrc → 22, cache: npm)
   ├─ npm ci
+  ├─ npm run test             (노트 콘텐츠 규칙 포함 — 실패하면 배포 중단)
   ├─ npm run build            (→ dist/)
   ├─ configure-aws-credentials@v4 (region ap-northeast-2)
   ├─ S3 sync (정적 에셋 1년 immutable, index.html·*.map 제외, --delete)

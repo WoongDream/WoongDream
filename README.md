@@ -28,16 +28,16 @@ npm run test      # 유닛 테스트
 ```
 src/
 ├── components/   # 공용 UI (button, header, footer)
-├── features/     # 페이지 섹션 (hero, about, projects, contact)
-├── pages/        # 라우트 (home, not-found)
-├── content/      # 정적 콘텐츠
+├── features/     # 페이지 섹션 (hero, about, projects, contact, notes)
+├── pages/        # 라우트 (home, project, notes, not-found)
+├── content/      # 정적 콘텐츠 (notes/ = /notes 마크다운)
 ├── store/        # Zustand
 ├── styles/       # theme · layout · text 헬퍼
 ├── hooks/ lib/ types/
 └── App.tsx · main.tsx
 ```
 
-자세한 내용: [`docs/architecture.md`](docs/architecture.md) · [`docs/conventions.md`](docs/conventions.md) · [`docs/deployment.md`](docs/deployment.md)
+자세한 내용: [`docs/architecture.md`](docs/architecture.md) · [`docs/conventions.md`](docs/conventions.md) · [`docs/deployment.md`](docs/deployment.md) · [`docs/notes.md`](docs/notes.md) (노트 콘텐츠 규칙)
 
 ## 작업 흐름
 

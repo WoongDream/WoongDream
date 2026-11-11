@@ -30,12 +30,12 @@ describe('Header', () => {
   });
 
   describe('navigation links', () => {
-    it('renders exactly five navigation links', () => {
+    it('renders exactly six navigation links', () => {
       renderWithTheme(<Header />);
       const nav = screen.getByRole('navigation');
       const links = nav.querySelectorAll('a');
       expect(links).toHaveLength(navItems.length);
-      expect(links).toHaveLength(5);
+      expect(links).toHaveLength(6);
     });
 
     navItems.forEach(({ label, href }) => {

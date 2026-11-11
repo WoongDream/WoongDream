@@ -26,6 +26,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 노트 콘텐츠 규칙(src/features/notes/content.test.ts) 등을 어기면 배포하지 않는다
+      - name: Test
+        run: npm run test
+
       - name: Build
         run: npm run build
 

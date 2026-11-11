@@ -35,3 +35,4 @@
 Architecture: `docs/architecture.md`
 Conventions: `docs/conventions.md`
 Deployment: `docs/deployment.md` (추후 구성)
+Notes 콘텐츠(`/notes`): `docs/notes.md`
